@@ -1,0 +1,49 @@
+<!-- pages/templates/pages/contact.html -->
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}Contact - Perez Remodeling and Landscaping{% endblock %}
+
+{% block content %}
+  <!-- Hero Section for Contact -->
+  <section class="modern-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static 'pages/img/contactHero.png' %}') center/cover no-repeat;">
+    <div class="hero-overlay">
+      <div class="hero-content text-center">
+        <h1>Contact Us</h1>
+        <p>Let’s talk about your project. Get in touch today!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Details & Form -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Contact Form Column -->
+      <div class="col-md-6">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or would like a quote, please fill out the form below.</p>
+        <form method="post" action="">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Your Name" class="form-control mb-2">
+          <input type="email" name="email" placeholder="Your Email" class="form-control mb-2">
+          <textarea name="message" placeholder="Your Message" class="form-control mb-2" rows="5"></textarea>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Information Column -->
+      <div class="col-md-6">
+        <h2>Our Information</h2>
+        <p><strong>Address:</strong> Po Box 234, Ranchos de Taos, NM 87557</p>
+        <p><strong>Phone:</strong> 575-770-5757</p>
+        <p><strong>Email:</strong> jorgepereza0823@gmail.com</p>
+        <p>
+          Feel free to call or email us, or use the form for a direct inquiry.
+        </p>
+        <!-- Optional Embedded Map -->
+        <div class="map-responsive mt-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25703.492740287966!2d-105.62147801024865!3d36.36231472460461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8717627bfda6f9eb%3A0x2b39be6ce0d09c83!2sRanchos%20De%20Taos%2C%20NM!5e0!3m2!1sen!2sus!4v1740889948228!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

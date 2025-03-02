@@ -1,0 +1,197 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}Home - Perez Remodeling and Landscaping{% endblock %}
+
+{% block content %}
+  <!-- Hero Section (Full-width with background image) -->
+  <section class="modern-hero" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('{% static 'pages/img/homeHeroSample.png' %}') center/cover no-repeat; min-height: 80vh;">
+    <div class="hero-overlay d-flex align-items-center justify-content-center">
+      <div class="text-center text-white">
+        <h1 class="display-3 fw-bold">Modern Remodeling & Landscaping</h1>
+        <p class="lead">Serving Taos, NM with exceptional craftsmanship and a client-focused approach.</p>
+        <div class="mt-4">
+          <a href="#portfolio" class="btn btn-primary btn-lg me-2">View Portfolio</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5" style="background-color: #f8f9fa;">
+  <div class="container text-center">
+    <h2 class="display-4 fw-bold mb-4" style="color: #333;">Our Portfolio</h2>
+    <p class="lead mb-5" style="color: #555;">
+      Explore our completed projects and witness the quality of our work.
+    </p>
+
+    <!-- Featured Project Carousel as Cards -->
+    <div id="portfolioCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 800px;">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Carousel Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <a href="{% url 'work_done' %}" class="portfolio-link">
+            <div class="card border-0 shadow-sm">
+              <img src="{% static 'pages/img/homeFlagstone.png' %}" class="card-img-top" alt="Exterior Renovation">
+            </div>
+          </a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <a href="{% url 'work_done' %}" class="portfolio-link">
+            <div class="card border-0 shadow-sm">
+              <img src="{% static 'pages/img/homeInterior.png' %}" class="card-img-top" alt="Interior Upgrade">
+            </div>
+          </a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <a href="{% url 'work_done' %}" class="portfolio-link">
+            <div class="card border-0 shadow-sm">
+              <img src="{% static 'pages/img/homeYard.png' %}" class="card-img-top" alt="Landscape Overhaul">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <a href="{% url 'work_done' %}" class="btn btn-primary btn-lg mt-5">View Full Portfolio</a>
+  </div>
+</section>
+
+
+  <!-- About Section (Simple solid background) -->
+<!-- About Section (Improved spacing + accent) -->
+<section id="about" class="py-5" style="background-color: #fff;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold" style="color: #333;">About Us</h2>
+      <div style="width: 60px; height: 4px; background-color: #006b54; margin: 0.75rem auto;"></div> <!-- Accent line -->
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <p class="lead mb-4 text-center" style="color: #555;">
+          Perez Remodeling and Landscaping has been transforming spaces in Taos, NM for over 20 years.
+          We blend modern design with traditional craftsmanship to deliver projects that are both
+          beautiful and built to last. We are committed to providing personalized service and
+          innovative solutions that exceed your expectations.
+        </p>
+        <div class="text-center">
+          <a href="{% url 'about' %}" class="btn btn-primary btn-lg">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services Section (Icons + short descriptions) -->
+  <!-- Using Font Awesome icons (e.g., far fa-gem for granite, fa-paint-roller for painting, etc.) -->
+  <!-- Make sure to load Font Awesome in your base template or above this section -->
+  <section id="services" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-4" style="color: #333;">Our Services</h2>
+      <p class="lead mb-5" style="color: #555;">
+        We offer a comprehensive suite of remodeling and landscaping services tailored to your needs.
+      </p>
+
+      <div class="row g-4">
+        <!-- Granite Countertops -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="far fa-gem fa-2x"></i>
+          </div>
+          <h5>Granite Countertops</h5>
+          <p>Custom, durable, and stylish countertops for your home.</p>
+        </div>
+        <!-- Tile, Brick & Pavers -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="fas fa-th-large fa-2x"></i>
+          </div>
+          <h5>Tile, Brick & Pavers</h5>
+          <p>Expert installation to enhance your living spaces.</p>
+        </div>
+        <!-- Painting -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="fas fa-paint-roller fa-2x"></i>
+          </div>
+          <h5>Painting</h5>
+          <p>Professional painting services for a fresh new look.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <!-- Landscaping & Yard Maintenance -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="fas fa-seedling fa-2x"></i>
+          </div>
+          <h5>Landscaping & Yard Maintenance</h5>
+          <p>Transform your outdoor space with expert care.</p>
+        </div>
+        <!-- Tree Trimming & Removal -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="fas fa-tree fa-2x"></i>
+          </div>
+          <h5>Tree Trimming & Removal</h5>
+          <p>Safe and efficient tree care to enhance your property.</p>
+        </div>
+        <!-- Junk Removal & Moving -->
+        <div class="col-md-4">
+          <div class="service-icon mb-2">
+            <i class="fas fa-truck fa-2x"></i>
+          </div>
+          <h5>Junk Removal & Moving</h5>
+          <p>Reliable services to declutter and relocate with ease.</p>
+        </div>
+      </div>
+      <a href="{% url 'services' %}" class="btn btn-outline-primary btn-lg mt-4">View All Services</a>
+    </div>
+  </section>
+
+  <!-- Contact Section (Light background + simple form) -->
+  <section id="contact" class="py-5" style="background-color: #fff;">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-4" style="color: #333;">Get in Touch</h2>
+      <p class="lead mb-4" style="color: #555;">Ready to start your project? Contact us today!</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form method="post" action="">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" name="name" placeholder="Your Name" class="form-control">
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <textarea name="message" placeholder="Your Message" class="form-control" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

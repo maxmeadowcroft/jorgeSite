@@ -1,0 +1,84 @@
+<!-- pages/templates/pages/about.html -->
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}About - Perez Remodeling and Landscaping{% endblock %}
+
+{% block content %}
+  <!-- Hero Section for About -->
+  <section class="modern-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'pages/img/aboutHero.png' %}') center/cover no-repeat;">
+    <div class="hero-overlay">
+      <div class="hero-content text-center">
+        <h1>About Us</h1>
+        <p>Discover our journey, passion, and commitment to quality remodeling and landscaping.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="{% static 'pages/img/aboutTeam.png' %}" class="img-fluid rounded" alt="Our Team">
+      </div>
+      <div class="col-md-6">
+        <h2>Our Story</h2>
+        <p>
+          Perez Remodeling and Landscaping has been transforming spaces in Taos, NM for over 20 years.
+          Our journey began with a simple idea—to combine quality craftsmanship with innovative design.
+          We pride ourselves on our commitment to excellence and customer satisfaction,
+          turning every project into a unique opportunity to create something extraordinary.
+        </p>
+        <p>
+          From remodeling interiors to designing breathtaking outdoor spaces, our passion is in
+          delivering solutions that enhance the beauty and functionality of your home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values Section -->
+  <section class="container my-5">
+    <div class="text-center">
+      <h2>Our Mission & Values</h2>
+      <p>
+        We strive to create lasting transformations by blending modern design with timeless craftsmanship.
+        Our core values guide every project we undertake.
+      </p>
+    </div>
+    <div class="row mt-4">
+      <!-- Integrity Card -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <!-- Icon for Integrity -->
+            <i class="fas fa-handshake fa-2x mb-3" style="color: #006b54;"></i>
+            <h4 class="card-title">Integrity</h4>
+            <p class="card-text">Honesty and transparency in every step of our process.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Excellence Card -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <!-- Icon for Excellence -->
+            <i class="fas fa-award fa-2x mb-3" style="color: #006b54;"></i>
+            <h4 class="card-title">Excellence</h4>
+            <p class="card-text">Quality craftsmanship and attention to detail in every project.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Innovation Card -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <!-- Icon for Innovation -->
+            <i class="fas fa-lightbulb fa-2x mb-3" style="color: #006b54;"></i>
+            <h4 class="card-title">Innovation</h4>
+            <p class="card-text">Creative solutions that blend modern design with practical functionality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

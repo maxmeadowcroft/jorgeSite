@@ -1,0 +1,229 @@
+/* 1. Hero Container */
+.modern-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../img/homeHeroSample.png') center/cover no-repeat;
+}
+
+/* Dark overlay + blur wrapper for content */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 2rem;
+}
+
+/* 2. Hero Text Content */
+.hero-content {
+  flex: 1 1 50%;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+.hero-content h1 {
+  font-size: 2.5rem; /* Larger headline */
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+.hero-content p {
+  font-size: 1.2rem; /* Larger body text */
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Carousel "Floating Card" */
+.featured-project-card {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Reuse your floating card styling, but now inside a carousel */
+.floating-card {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 360px;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative; /* For the carousel controls to show properly */
+}
+.floating-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel images within the card */
+.carousel-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Card body for each slide */
+.floating-card-body {
+  padding: 1rem 1.5rem;
+}
+.floating-card-body h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.floating-card-body p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* 4. Buttons (example) */
+.btn-primary {
+  background-color: #006b54;
+  border-color: #006b54;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: #005645;
+  border-color: #005645;
+}
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #006b54;
+}
+
+/* 5. Responsive Tweaks */
+@media (max-width: 992px) {
+  .hero-content,
+  .featured-project-card {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Ensure carousel indicators are visible */
+.carousel-indicators button {
+  background-color: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.carousel-indicators .active {
+  background-color: var(--accent-color); /* You can set var(--accent-color) in your root */
+  opacity: 1;
+}
+
+/* Modern styling for service cards */
+.service-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.modern-hero .hero-content h1 {
+  font-size: 3rem; /* Larger headline */
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.modern-hero .hero-content p {
+  font-size: 1.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.project-card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover; /* Ensures consistent thumbnail sizing */
+}
+
+.full-width-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.floating-card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.floating-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.carousel-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border-radius: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}

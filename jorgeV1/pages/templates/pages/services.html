@@ -1,0 +1,112 @@
+<!-- pages/templates/pages/services.html -->
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}Services - Perez Remodeling and Landscaping{% endblock %}
+
+{% block content %}
+  <!-- Hero Section for Services -->
+  <section class="modern-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'pages/img/servicesHero.png' %}') center/cover no-repeat;">
+    <div class="hero-overlay">
+      <div class="hero-content text-center">
+        <h1>Our Services</h1>
+        <p class="mb-0">Transforming your home with quality craftsmanship – from luxurious countertops to professional moving services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <!-- Granite Countertops -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesCounter.png' %}" class="card-img-top" alt="Granite Countertops">
+          <div class="card-body">
+            <h5 class="card-title">Granite Countertops</h5>
+            <p class="card-text">Enhance your kitchen or bathroom with custom granite countertops designed for durability and style.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tile -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesTile.png' %}" class="card-img-top" alt="Tile">
+          <div class="card-body">
+            <h5 class="card-title">Tile</h5>
+            <p class="card-text">Expert tile installation that adds elegance and practicality to your space.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Brick -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesBrick.png' %}" class="card-img-top" alt="Brick">
+          <div class="card-body">
+            <h5 class="card-title">Brick and Pavers</h5>
+            <p class="card-text">Sturdy brickwork or paver solutions that bring timeless beauty and resilience to your property.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pavers -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesFlagstone.png' %}" class="card-img-top" alt="Pavers">
+          <div class="card-body">
+            <h5 class="card-title">Flagstone</h5>
+            <p class="card-text">Beautiful flagstone installations perfect for driveways, patios, and walkways that stand the test of time.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Painting -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesPainting.png' %}" class="card-img-top" alt="Painting">
+          <div class="card-body">
+            <h5 class="card-title">Painting</h5>
+            <p class="card-text">Professional interior and exterior painting services that refresh and transform your home.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Landscaping & Yard Maintenance -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesLandscape.png' %}" class="card-img-top" alt="Landscaping & Yard Maintenance">
+          <div class="card-body">
+            <h5 class="card-title">Landscaping & Yard Maintenance</h5>
+            <p class="card-text">Comprehensive landscaping and yard maintenance services to keep your outdoors immaculate.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tree Trimming & Removal -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesTree.png' %}" class="card-img-top" alt="Tree Trimming & Removal">
+          <div class="card-body">
+            <h5 class="card-title">Tree Trimming & Removal</h5>
+            <p class="card-text">Safe and efficient tree trimming and removal to enhance both aesthetics and safety.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Junk Removal -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesJunk.png' %}" class="card-img-top" alt="Junk Removal">
+          <div class="card-body">
+            <h5 class="card-title">Junk Removal</h5>
+            <p class="card-text">Quick and reliable junk removal services to help you declutter your space efficiently.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Moving -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 border-0">
+          <img src="{% static 'pages/img/servicesMoving.png' %}" class="card-img-top" alt="Moving">
+          <div class="card-body">
+            <h5 class="card-title">Moving</h5>
+            <p class="card-text">Professional moving services ensuring a smooth and hassle-free relocation experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

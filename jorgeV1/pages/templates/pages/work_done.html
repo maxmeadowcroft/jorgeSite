@@ -1,0 +1,53 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %}Work Done{% endblock %}
+
+{% block content %}
+  <section class="modern-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'pages/img/portfolioHero.png' %}') center/cover no-repeat;">
+    <div class="hero-overlay">
+      <div class="hero-content text-center text-white">
+        <h1 class="display-4 fw-bold">Our Portfolio</h1>
+        <p class="lead">Discover some of our best remodeling & landscaping projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    {% for project in projects %}
+      <h2 class="mb-4">{{ project.name }}</h2>
+      <p>{{ project.description }}</p>
+      <div class="row g-4">
+        {% for img in project.images.all %}
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-0 project-card">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal{{ img.id }}">
+                <img src="{{ img.image.url }}" class="card-img-top" alt="{{ img.title }}">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">{{ img.title }}</h5>
+                <p class="card-text">{{ img.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal for each image -->
+          <div class="modal fade" id="imageModal{{ img.id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ img.id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-body p-0">
+                  <img src="{{ img.image.url }}" alt="{{ img.title }}" class="img-fluid w-100">
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                  <h5 class="modal-title mb-0" id="imageModalLabel{{ img.id }}">{{ img.title }}</h5>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <p>No images for this project yet.</p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endblock %}
